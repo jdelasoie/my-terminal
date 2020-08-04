@@ -14,16 +14,18 @@ sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O 
 
 ## Zsh config
 
-### History
+### One History for All
 
 ~/.zshrc
 ```bash
-# User configuration
+cat <<EOT >> ~/.zshrc
+# One history for all terminals
 HISTFILE=~/.zsh_history
 HISTSIZE=999999999
 SAVEHIST=$HISTSIZE
 setopt inc_append_history
 setopt share_history
+EOT
 ```
 
 ### Aliases
